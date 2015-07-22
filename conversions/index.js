@@ -6,6 +6,7 @@ module.exports = {
   rgb2xyz  : require("./rgb2xyz"),
   rgb2lab  : require("./rgb2lab"),
   rgb2lch  : require("./rgb2lch"),
+  rgb2hex  : require("./rgb2hex"),
 
   hsl2rgb  : require("./hsl2rgb"),
   hsl2hsv  : require("./hsl2hsv"),
@@ -40,6 +41,8 @@ module.exports = {
   lch2xyz  : require("./lch2xyz"),
   lch2rgb  : require("./lch2rgb"),
 
+  hex2rgb  : require("./hex2rgb")
+
   // rgb2keyword: rgb2keyword,
   // hsl2keyword: hsl2keyword,
   // hsv2keyword: hsv2keyword,
@@ -52,4 +55,4 @@ module.exports = {
   // keyword2cmyk: keyword2cmyk,
   // keyword2lab: keyword2lab,
   // keyword2xyz: keyword2xyz
-}
+};
