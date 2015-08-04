@@ -73,16 +73,3 @@ assert.deepEqual(convert.hsl2hsv(val), val);
 assert.deepEqual(convert.hsl2rgb(val), val);
 assert.deepEqual(convert.hsl2hwb(val), [0, 0, 100]);
 assert.deepEqual(convert.hsl2cmyk(val), [0, 0, 0, 100]);
-
-
-// assert.deepEqual(convert.rgb2keyword([255, 228, 196]), "bisque");
-// assert.deepEqual(convert.hsl2keyword([240, 100, 50]), "blue");
-// assert.deepEqual(convert.hsv2keyword([240, 100, 100]), "blue");
-// assert.deepEqual(convert.cmyk2keyword([100, 100, 0, 0]), "blue");
-// assert.deepEqual(convert.keyword2rgb("blue"), [0, 0, 255]);
-// assert.deepEqual(convert.keyword2hsl("blue"), [240, 100, 50]);
-// assert.deepEqual(convert.keyword2hsv("blue"), [240, 100, 100]);
-// assert.deepEqual(convert.keyword2hwb("blue"), [240, 0, 0]);
-// assert.deepEqual(convert.keyword2cmyk("blue"), [100, 100, 0, 0]);
-// assert.deepEqual(convert.keyword2lab("blue"), [32, 79, -108]);
-// assert.deepEqual(convert.keyword2xyz("blue"), [18, 7, 95]);
