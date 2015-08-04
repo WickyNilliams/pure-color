@@ -44,7 +44,7 @@ assert.deepEqual(convert.lch2rgb([69, 65, 137]), [98, 188, 83]);
 // hwb
 // http://dev.w3.org/csswg/css-color/#hwb-examples
 
-// all extrem value should give black, white or grey
+// all extreme value should give black, white or grey
 for(var angle = 0; angle <= 360; angle ++) {
   assert.deepEqual(convert.hwb2rgb([angle, 0, 100]), [0, 0, 0]);
   assert.deepEqual(convert.hwb2rgb([angle, 100, 0]), [255, 255, 255]);

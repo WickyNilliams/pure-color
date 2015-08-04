@@ -1,3 +1,6 @@
+var compose = require("../util/compose");
+var round = require("../util/round");
+
 function cmyk2rgb(cmyk) {
   var c = cmyk[0] / 100,
       m = cmyk[1] / 100,
@@ -11,4 +14,5 @@ function cmyk2rgb(cmyk) {
   return [r * 255, g * 255, b * 255];
 }
 
-module.exports = cmyk2rgb;
+module.exports = compose(round, cmyk2rgb);
+module.exports.raw = cmyk2rgb;

@@ -1,5 +1,9 @@
 var rgb2cmyk = require("./rgb2cmyk");
 var hsv2rgb = require("./hsv2rgb");
 var compose = require("../util/compose");
+var round = require("../util/round");
 
-module.exports = compose(rgb2cmyk, hsv2rgb);
+var raw = compose(rgb2cmyk, hsv2rgb);
+
+module.exports = compose(round, raw);
+module.exports.raw = raw;

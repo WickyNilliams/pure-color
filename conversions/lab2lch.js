@@ -1,3 +1,6 @@
+var compose = require("../util/compose");
+var round = require("../util/round");
+
 function lab2lch(lab) {
   var l = lab[0],
       a = lab[1],
@@ -13,4 +16,5 @@ function lab2lch(lab) {
   return [l, c, h];
 }
 
-module.exports = lab2lch;
+module.exports = compose(round, lab2lch);
+module.exports.raw = lab2lch;
