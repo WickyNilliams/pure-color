@@ -29,4 +29,8 @@ function parse(color) {
   }
 }
 
+parse.rgb = rgb;
+parse.hsl = hsl;
+parse.hex = hex;
+
 module.exports = parse;

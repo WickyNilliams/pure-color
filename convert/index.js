@@ -2,9 +2,6 @@ module.exports = {
   cmyk : {
     rgb : require("./cmyk2rgb")
   },
-  hex : {
-    rgb  : require("./hex2rgb")
-  },
   hsl : {
     hsv  : require("./hsl2hsv"),
     rgb  : require("./hsl2rgb")
