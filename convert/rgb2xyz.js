@@ -1,6 +1,3 @@
-var compose = require("../util/compose");
-var round = require("../util/round");
-
 function rgb2xyz(rgb) {
   var r = rgb[0] / 255,
       g = rgb[1] / 255,
@@ -18,5 +15,4 @@ function rgb2xyz(rgb) {
   return [x * 100, y *100, z * 100];
 }
 
-module.exports = compose(round, rgb2xyz);
-module.exports.raw = rgb2xyz;
+module.exports = rgb2xyz;

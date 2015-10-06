@@ -1,6 +1,3 @@
-var compose = require("../util/compose");
-var round = require("../util/round");
-
 function hsl2rgb(hsl) {
   var h = hsl[0] / 360,
       s = hsl[1] / 100,
@@ -39,5 +36,4 @@ function hsl2rgb(hsl) {
   return rgb;
 }
 
-module.exports = compose(round, hsl2rgb);
-module.exports.raw = hsl2rgb;
+module.exports = hsl2rgb;

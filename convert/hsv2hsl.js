@@ -1,6 +1,3 @@
-var compose = require("../util/compose");
-var round = require("../util/round");
-
 function hsv2hsl(hsv) {
   var h = hsv[0],
       s = hsv[1] / 100,
@@ -15,5 +12,4 @@ function hsv2hsl(hsv) {
   return [h, sl * 100, l * 100];
 }
 
-module.exports = compose(round, hsv2hsl);
-module.exports.raw = hsv2hsl;
+module.exports = hsv2hsl;

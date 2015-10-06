@@ -1,20 +1,26 @@
 {
-  "name": "color-convert",
-  "description": "Plain color conversion functions",
-  "version": "0.5.3",
-  "author": "Heather Arthur <fayearthur@gmail.com>",
+  "name": "pure-color",
+  "description": "Pure functions for color conversion",
+  "main" : "index.js",
+  "version": "1.0.0",
+  "author": "Nick Williams",
   "repository": {
     "type": "git",
-    "url": "http://github.com/harthur/color-convert.git"
+    "url": "http://github.com/WickyNilliams/color-convert.git"
   },
   "devDependencies": {
   },
   "scripts": {
-    "test": "node test/basic.js"
+    "test": "node test/convert.js"
   },
   "keywords": [
     "color",
     "colour",
-    "rgb"
+    "convert",
+    "conversion",
+    "converter",
+    "rgb",
+    "hsl",
+    "hsv"
   ]
 }

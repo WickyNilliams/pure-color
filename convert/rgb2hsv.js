@@ -1,6 +1,3 @@
-var compose = require("../util/compose");
-var round = require("../util/round");
-
 function rgb2hsv(rgb) {
   var r = rgb[0],
       g = rgb[1],
@@ -34,5 +31,4 @@ function rgb2hsv(rgb) {
   return [h, s, v];
 }
 
-module.exports = compose(round, rgb2hsv);
-module.exports.raw = rgb2hsv;
+module.exports = rgb2hsv;

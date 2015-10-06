@@ -1,11 +1,11 @@
-var compose = require("../util/compose");
-var round = require("../util/round");
+var rgb2xyz = require("./rgb2xyz");
 
-function xyz2lab(xyz) {
-  var x = xyz[0],
-      y = xyz[1],
-      z = xyz[2],
-      l, a, b;
+function rgb2lab(rgb) {
+  var xyz = rgb2xyz(rgb),
+        x = xyz[0],
+        y = xyz[1],
+        z = xyz[2],
+        l, a, b;
 
   x /= 95.047;
   y /= 100;
@@ -22,5 +22,4 @@ function xyz2lab(xyz) {
   return [l, a, b];
 }
 
-module.exports = compose(round, xyz2lab);
-module.exports.raw = xyz2lab;
+module.exports = rgb2lab;

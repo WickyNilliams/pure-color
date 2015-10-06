@@ -1,3 +1,4 @@
+// TODO: short form? e.g. #fff
 function hex2rgb(hex) {
   return [
     parseInt(hex.substring(1,3), 16),

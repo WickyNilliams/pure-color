@@ -1,6 +1,3 @@
-var compose = require("../util/compose");
-var round = require("../util/round");
-
 // http://dev.w3.org/csswg/css-color/#hwb-to-rgb
 function hwb2rgb(hwb) {
   var h = hwb[0] / 360,
@@ -37,5 +34,4 @@ function hwb2rgb(hwb) {
   return [r * 255, g * 255, b * 255];
 }
 
-module.exports = compose(round, hwb2rgb);
-module.exports.raw = hwb2rgb;
+module.exports = hwb2rgb;
