@@ -1,6 +1,6 @@
 {
   "name": "pure-color",
-  "description": "Pure functions for color conversion",
+  "description": "Pure functions for color conversion and parsing",
   "main" : "index.js",
   "version": "1.0.0",
   "author": "Nick Williams",
@@ -11,7 +11,7 @@
   "devDependencies": {
   },
   "scripts": {
-    "test": "node test/convert.js"
+    "test": "node test/convert.js && node test/parse.js"
   },
   "keywords": [
     "color",
@@ -21,6 +21,7 @@
     "converter",
     "rgb",
     "hsl",
-    "hsv"
+    "hsv",
+    "parse"
   ]
 }
