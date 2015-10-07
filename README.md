@@ -2,6 +2,14 @@
 
 `pure-color` is a color conversion and parsing library for the browser and node. It offers conversions between `rgb`, `hsl`, `hsv`, `hwb`, `cmyk`, `xyz`, `lab`, `lch`, `hex`. It offers parsing of `rgb(a)`, `hex` and `hsl(a)` strings.
 
+## Installation
+
+Install with npm:
+
+```bash
+npm install pure-color --save
+```
+
 ## Structure
 
 The library is structured to allow requiring of just the functions you need. You can also require everything if file size is not a concern (e.g. node environment).
