@@ -118,7 +118,7 @@ parse("rgba(0, 0, 0, 1)") // [0, 0, 0, 1];
 parse("hsla(0, 0, 0, 1)") // [0, 0, 0];
 ```
 
-Individual parsing functions are available if you know what format you will be parsing. Note that the `hsl` parse funct.ion returns an `hsl` array, whereas `rgb` and `hex` return an `rgb` array
+Individual parsing functions are available if you know what format you will be parsing. Note that the `hsl` parse function returns an `hsl` array, whereas `rgb` and `hex` return an `rgb` array
 
 ```js
 var parse = require("pure-color/parse");
