@@ -1,12 +1,10 @@
 var extractComponents = require("./extractComponents");
 var clamp = require("../util/clamp");
 
-// TODO: handle percentage values for rgb?
-
 function parseRgbComponent(component, i) {
   if (i < 3) {
     if (component.indexOf('%') != -1) {
-      return component = Math.round(255 * clamp(parseInt(component, 10), 0, 100)/100);
+      return Math.round(255 * clamp(parseInt(component, 10), 0, 100)/100);
     } else {
       return clamp(parseInt(component, 10), 0, 255);
     }

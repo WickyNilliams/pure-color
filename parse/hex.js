@@ -1,8 +1,8 @@
 function hex(hex) {
   if (hex.length === 4) {
-    hex = '#' + hex[1] + hex[1] +
-      hex[2] + hex[2] + 
-      hex[3] + hex[3];
+    hex = '#' + hex.charAt(1) + hex.charAt(1) +
+      hex.charAt(2) + hex.charAt(2) + 
+      hex.charAt(3) + hex.charAt(3);
   }
   return [
     parseInt(hex.substring(1,3), 16),
