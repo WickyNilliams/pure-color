@@ -1,4 +1,17 @@
-# 0.5.3 - 2015-06-02
+# Changelog
 
-- Fixed: hsl2hsv does not return `NaN` anymore when using `[0,0,0]`
-([#15](https://github.com/harthur/color-convert/issues/15))
+## v1.1.0
+
+Big thanks to [@tristaaan](https://github.com/tristaaan) for this release!
+
+* Support parsing shortform hex colors e.g. `#fff`
+* Support parsing rgb colors with percentage values e.g. `rgb(50%, 50%, 50%)`
+* Better test coverage
+
+## v1.0.0
+
+* Fork @harthur's [color-convert](https://github.com/harthur/color-convert)
+* Simplify API
+* Drop unecessary functions
+* Add parsing functions
+* Add basic data-driven test-suite

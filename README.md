@@ -148,16 +148,6 @@ This library attempts to correct that by:
 * Offer the bare minimum necessary functions
 * Allow requiring of only the functions you need, reducing file size
 
-## Changelog
-
-### v1.0.0
-
-* Fork @harthur's [color-convert](https://github.com/harthur/color-convert)
-* Simplify API
-* Drop unecessary functions
-* Add parsing functions
-* Add basic data-driven test-suite
-
 ## Contributions & Issues
 
 _Contributions are welcome from **everyone**_.
