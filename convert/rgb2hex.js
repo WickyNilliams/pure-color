@@ -1,5 +1,9 @@
+var clamp = require("../util/clamp");
+
 function componentToHex(c) {
-  var hex = c.toString(16);
+  var value = Math.round(clamp(c, 0, 255));
+  var hex   = value.toString(16);
+
   return hex.length == 1 ? "0" + hex : hex;
 }
 
