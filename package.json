@@ -2,7 +2,7 @@
   "name": "pure-color",
   "description": "Pure functions for color conversion and parsing",
   "main" : "index.js",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Nick Williams",
   "repository": {
     "type": "git",
