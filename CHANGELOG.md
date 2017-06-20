@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.3.0
+
+* Support for parsing hex colors will alpha values e.g. `#ffff`, `#ffffffff` (thanks to [@0tho](https://github.com/0tho))
+* Add `hsl2string` conversion function
+
+## v1.2.0
+
+* Allow rgb2hex to handle floats
+* Add travis build
+
+
 ## v1.1.0
 
 Big thanks to [@tristaaan](https://github.com/tristaaan) for this release!
