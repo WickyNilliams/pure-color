@@ -12,6 +12,7 @@
   "devDependencies": {
   },
   "scripts": {
+    "postversion": "git push origin master --tags && npm publish",
     "test": "node test/convert.js && node test/parse.js"
   },
   "keywords": [
