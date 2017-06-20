@@ -4,7 +4,8 @@ module.exports = {
   },
   hsl : {
     hsv  : require("./hsl2hsv"),
-    rgb  : require("./hsl2rgb")
+    rgb  : require("./hsl2rgb"),
+    string : require("./hsl2string")
   },
   hsv : {
     hsl  : require("./hsv2hsl"),
