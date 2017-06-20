@@ -8,7 +8,9 @@ function componentToHex(c) {
 }
 
 function rgb2hex(rgb) {
-  return "#" + componentToHex(rgb[0]) + componentToHex(rgb[1]) + componentToHex(rgb[2]);
+  var alpha = rgb.length === 4 ? componentToHex(rgb[3] * 255) : "";
+
+  return "#" + componentToHex(rgb[0]) + componentToHex(rgb[1]) + componentToHex(rgb[2]) + alpha;
 }
 
 module.exports = rgb2hex;
