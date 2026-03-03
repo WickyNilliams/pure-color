@@ -10,10 +10,10 @@ var parsers = {
 };
 
 for (var space in parsers) {
-  describe("parse " + space, function() {
+  describe(`parse ${space}`, function() {
     var parser = parsers[space];
     fixtures[space].forEach(function(color) {
-      it(JSON.stringify(color[0]) + " -> " + JSON.stringify(color[1]), function() {
+      it(`${JSON.stringify(color[0])} -> ${JSON.stringify(color[1])}`, function() {
         assert.deepStrictEqual(parser(color[0]), color[1]);
       });
     });

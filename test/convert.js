@@ -25,10 +25,10 @@ for(var angle = 0; angle <= 360; angle ++) {
 
 for (var from in fixtures) {
   for (var to in fixtures[from]) {
-    describe(from + "2" + to, function() {
+    describe(`${from}2${to}`, function() {
       var conversion = convert[from][to];
       fixtures[from][to].forEach(function(color) {
-        it(JSON.stringify(color[0]) + " -> " + JSON.stringify(color[1]), function() {
+        it(`${JSON.stringify(color[0])} -> ${JSON.stringify(color[1])}`, function() {
           equal(conversion(color[0]), color[1]);
         });
       });
