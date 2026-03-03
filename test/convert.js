@@ -1,5 +1,6 @@
+var { describe, it } = require("node:test");
+var assert = require("node:assert");
 var convert = require("../convert");
-var assert = require("assert");
 var fixtures = require("./fixtures/convert");
 
 function round(arr) {
@@ -8,31 +9,29 @@ function round(arr) {
 
 function equal(actual, expected) {
   if (!Array.isArray(expected)) {
-    assert.equal(actual, expected);
+    assert.strictEqual(actual, expected);
   } else {
-    assert.deepEqual(round(actual), expected);
+    assert.deepStrictEqual(round(actual), expected);
   }
 }
 
-function test(from, to, colors) {
-  var conversion = convert[from][to];
-  colors.forEach(function(color) {
-    equal(conversion(color[0]), color[1]);
-  });
-}
-
-// dyanmically create tests for hwb...
+// dynamically create tests for hwb...
 for(var angle = 0; angle <= 360; angle ++) {
-  // all extreme value should give black, white or grey
+  // all extreme values should give black, white or grey
   fixtures.hwb.rgb.push([[angle, 0, 100], [0, 0, 0]]);
   fixtures.hwb.rgb.push([[angle, 100, 0], [255, 255, 255]]);
   fixtures.hwb.rgb.push([[angle, 100, 100], [128, 128, 128]]);
 }
 
-// run tests
 for (var from in fixtures) {
   for (var to in fixtures[from]) {
-    console.log("converting: " + from + "2" + to);
-    test(from, to, fixtures[from][to]);
+    describe(`${from}2${to}`, function() {
+      var conversion = convert[from][to];
+      fixtures[from][to].forEach(function(color) {
+        it(`${JSON.stringify(color[0])} -> ${JSON.stringify(color[1])}`, function() {
+          equal(conversion(color[0]), color[1]);
+        });
+      });
+    });
   }
 }

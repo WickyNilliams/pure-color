@@ -1,4 +1,5 @@
-var assert = require("assert");
+var { describe, it } = require("node:test");
+var assert = require("node:assert");
 var fixtures = require("./fixtures/parse");
 
 var parsers = {
@@ -8,14 +9,13 @@ var parsers = {
   parse : require("../parse")
 };
 
-function test(from, colors) {
-  var parser = parsers[from];
-  colors.forEach(function(color) {
-    assert.deepEqual(parser(color[0]), color[1]);
+for (var space in parsers) {
+  describe(`parse ${space}`, function() {
+    var parser = parsers[space];
+    fixtures[space].forEach(function(color) {
+      it(`${JSON.stringify(color[0])} -> ${JSON.stringify(color[1])}`, function() {
+        assert.deepStrictEqual(parser(color[0]), color[1]);
+      });
+    });
   });
-}
-
-for(var space in parsers) {
-  console.log("parsing: " + space);
-  test(space, fixtures[space]);
 }
