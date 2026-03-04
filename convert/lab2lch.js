@@ -17,4 +17,4 @@ function lab2lch(lab) {
   return [l, c, h];
 }
 
-module.exports = lab2lch;
+export default lab2lch;

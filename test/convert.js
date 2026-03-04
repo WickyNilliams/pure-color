@@ -1,7 +1,7 @@
-var { describe, it } = require("node:test");
-var assert = require("node:assert");
-var convert = require("../convert");
-var fixtures = require("./fixtures/convert");
+import { describe, it } from "node:test";
+import assert from "node:assert";
+import convert from "../convert/index.js";
+import fixtures from "./fixtures/convert.json" with { type: "json" };
 
 function round(arr) {
   return arr.map(Math.round)

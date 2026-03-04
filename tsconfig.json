@@ -5,9 +5,9 @@
     "declaration": true,
     "emitDeclarationOnly": true,
     "declarationDir": "types",
-    "target": "es5",
-    "module": "commonjs",
-    "moduleResolution": "node"
+    "target": "es2022",
+    "module": "nodenext",
+    "moduleResolution": "nodenext"
   },
   "include": [
     "index.js",

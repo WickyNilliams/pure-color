@@ -8,4 +8,4 @@ function extractComponents(color) {
   return /** @type {RegExpMatchArray} */ (color.match(component));
 }
 
-module.exports = extractComponents;
+export default extractComponents;

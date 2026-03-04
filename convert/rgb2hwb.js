@@ -1,4 +1,4 @@
-var rgb2hsl = require("./rgb2hsl");
+import rgb2hsl from "./rgb2hsl.js";
 
 /**
  * @param {number[]} rgb
@@ -15,4 +15,4 @@ function rgb2hwb(rgb) {
   return [h, w * 100, b * 100];
 }
 
-module.exports = rgb2hwb;
+export default rgb2hwb;

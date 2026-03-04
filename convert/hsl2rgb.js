@@ -40,4 +40,4 @@ function hsl2rgb(hsl) {
   return rgb;
 }
 
-module.exports = hsl2rgb;
+export default hsl2rgb;

@@ -29,4 +29,4 @@ function lab2xyz(lab) {
   return [x, y, z];
 }
 
-module.exports = lab2xyz;
+export default lab2xyz;

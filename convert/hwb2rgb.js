@@ -38,4 +38,4 @@ function hwb2rgb(hwb) {
   return [r * 255, g * 255, b * 255];
 }
 
-module.exports = hwb2rgb;
+export default hwb2rgb;

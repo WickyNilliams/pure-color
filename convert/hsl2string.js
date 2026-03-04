@@ -18,4 +18,4 @@ function hsl2string(hsl) {
   return `${scheme}(${parts.join(",")})`;
 }
 
-module.exports = hsl2string;
+export default hsl2string;
