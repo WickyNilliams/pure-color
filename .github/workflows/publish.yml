@@ -49,7 +49,7 @@ jobs:
         run: npm run build:types
 
       - name: Bump version
-        run: npm version ${{ inputs.version_type }} --ignore-scripts
+        run: npm version ${{ inputs.version_type }}
 
       - name: Push changes and tags
         run: git push --follow-tags
