@@ -1,6 +1,11 @@
 var extractComponents = require("./extractComponents");
 var clamp = require("../util/clamp");
 
+/**
+ * @param {string} component
+ * @param {number} i
+ * @returns {number}
+ */
 function parseRgbComponent(component, i) {
   if (i < 3) {
     if (component.indexOf('%') != -1) {
@@ -13,6 +18,10 @@ function parseRgbComponent(component, i) {
   } 
 }
 
+/**
+ * @param {string} color
+ * @returns {number[]}
+ */
 function rgb(color) {
   return extractComponents(color).map(parseRgbComponent);
 }

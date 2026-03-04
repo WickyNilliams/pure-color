@@ -3,6 +3,10 @@ var hex = require("./hex");
 var rgb = require("./rgb");
 var hsl2rgb = require("../convert/hsl2rgb");
 
+/**
+ * @param {string} color
+ * @returns {number[]}
+ */
 function hsl2rgbParse(color) {
   var h = hsl(color);
   var r = hsl2rgb(h);
@@ -21,6 +25,10 @@ var space2parser = {
   "rgb" : rgb
 };
 
+/**
+ * @param {string} color
+ * @returns {number[] | undefined}
+ */
 function parse(color) {
   for(var scheme in space2parser) {
     if(color.indexOf(scheme) === 0) {

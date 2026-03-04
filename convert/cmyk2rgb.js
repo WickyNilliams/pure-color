@@ -1,3 +1,7 @@
+/**
+ * @param {number[]} cmyk
+ * @returns {number[]}
+ */
 function cmyk2rgb(cmyk) {
   var c = cmyk[0] / 100,
       m = cmyk[1] / 100,

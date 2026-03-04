@@ -1,5 +1,9 @@
 var rgb2xyz = require("./rgb2xyz");
 
+/**
+ * @param {number[]} rgb
+ * @returns {number[]}
+ */
 function rgb2lab(rgb) {
   var xyz = rgb2xyz(rgb),
         x = xyz[0],

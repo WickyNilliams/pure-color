@@ -1,3 +1,7 @@
+/**
+ * @param {number[]} xyz
+ * @returns {number[]}
+ */
 function xyz2lab(xyz) {
   var x = xyz[0],
       y = xyz[1],

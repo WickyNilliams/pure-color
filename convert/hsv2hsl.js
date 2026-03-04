@@ -1,3 +1,7 @@
+/**
+ * @param {number[]} hsv
+ * @returns {number[]}
+ */
 function hsv2hsl(hsv) {
   var h = hsv[0],
       s = hsv[1] / 100,

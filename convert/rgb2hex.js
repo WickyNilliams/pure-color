@@ -1,5 +1,9 @@
 var clamp = require("../util/clamp");
 
+/**
+ * @param {number} c
+ * @returns {string}
+ */
 function componentToHex(c) {
   var value = Math.round(clamp(c, 0, 255));
   var hex   = value.toString(16);
@@ -7,6 +11,10 @@ function componentToHex(c) {
   return hex.length == 1 ? "0" + hex : hex;
 }
 
+/**
+ * @param {number[]} rgb
+ * @returns {string}
+ */
 function rgb2hex(rgb) {
   var alpha = rgb.length === 4 ? componentToHex(rgb[3] * 255) : "";
 

@@ -1,5 +1,9 @@
 var rgb2hsl = require("./rgb2hsl");
 
+/**
+ * @param {number[]} rgb
+ * @returns {number[]}
+ */
 function rgb2hwb(rgb) {
   var r = rgb[0],
       g = rgb[1],

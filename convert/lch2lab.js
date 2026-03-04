@@ -1,3 +1,7 @@
+/**
+ * @param {number[]} lch
+ * @returns {number[]}
+ */
 function lch2lab(lch) {
   var l = lch[0],
       c = lch[1],

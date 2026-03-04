@@ -1,3 +1,7 @@
+/**
+ * @param {number[]} xyz
+ * @returns {number[]}
+ */
 function xyz2rgb(xyz) {
   var x = xyz[0] / 100,
       y = xyz[1] / 100,
