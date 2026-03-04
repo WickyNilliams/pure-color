@@ -21,8 +21,6 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "build:types": "tsc",
-    "version": "npm run build:types",
-    "postversion": "git push origin master --tags && npm publish",
     "test": "node --test test/convert.js test/parse.js"
   },
   "keywords": [
