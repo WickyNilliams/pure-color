@@ -1,10 +1,10 @@
 import { describe, it } from "node:test";
 import assert from "node:assert";
 import fixtures from "./fixtures/parse.json" with { type: "json" };
-import rgb from "../parse/rgb.js";
-import hex from "../parse/hex.js";
-import hsl from "../parse/hsl.js";
-import parse from "../parse/index.js";
+import { rgb } from "../parse/rgb.js";
+import { hex } from "../parse/hex.js";
+import { hsl } from "../parse/hsl.js";
+import { parse } from "../parse/parse.js";
 
 var parsers = {
   rgb,

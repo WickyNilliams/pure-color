@@ -2,7 +2,7 @@
  * @param {number[]} lch
  * @returns {number[]}
  */
-function lch2lab(lch) {
+export function lch2lab(lch) {
   var l = lch[0],
       c = lch[1],
       h = lch[2],
@@ -14,4 +14,3 @@ function lch2lab(lch) {
   return [l, a, b];
 }
 
-export default lch2lab;

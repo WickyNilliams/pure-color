@@ -14,23 +14,17 @@ npm install pure-color --save
 
 ## Structure
 
-The library is structured to allow importing of just the functions you need. You can also import everything if file size is not a concern (e.g. node environment).
+The library is structured to allow importing of just the functions you need.
 
 ```js
-// import everything
-import color from "pure-color";
-
-// import all conversion functions
-import convert from "pure-color/convert";
-
-// import all parse functions
-import parse from "pure-color/parse";
-
 // import individual conversion function
-import rgb2hsl from "pure-color/convert/rgb2hsl";
+import { rgb2hsl } from "pure-color/convert/rgb2hsl";
 
 // import individual parse function
-import parseRgb from "pure-color/parse/rgb";
+import { rgb as parseRgb } from "pure-color/parse/rgb";
+
+// import the generic parser (auto-detects format)
+import { parse } from "pure-color/parse/parse";
 ```
 
 ## API
@@ -42,22 +36,11 @@ The majority of conversion functions have the signature `[Number] -> [Number]`. 
 You can see all available conversions in the [`convert` directory](convert).
 
 ```js
-import rgb2hsl from "pure-color/convert/rgb2hsl";
-import rgb2hex from "pure-color/convert/rgb2hex";
+import { rgb2hsl } from "pure-color/convert/rgb2hsl";
+import { rgb2hex } from "pure-color/convert/rgb2hex";
 
 rgb2hsl([255, 0, 0]); // [0, 100, 50]
 rgb2hex([255, 0, 0]); // "#ff0000"
-```
-
-#### Hash
-
-`"pure-color/convert"` exports a hash of conversion functions keyed first by the "from" space, then by the "to" space:
-
-```js
-import convert from "pure-color/convert";
-
-convert.rgb.hsl([1, 2, 3]);
-convert["rgb"]["hsl"]([1, 2, 3]);
 ```
 
 #### Notes
@@ -85,8 +68,8 @@ Any conversions that are simple compositions of other conversions have been omit
 For example, let's imagine we wanted to convert `hsl` to `cmyk`. This function doesn't exist, but it can be trivially created by composing `hsl2rgb` and `rgb2cmyk`:
 
 ```js
-import hsl2rgb from "pure-color/convert/hsl2rgb";
-import rgb2cmyk from "pure-color/convert/rgb2cmyk";
+import { hsl2rgb } from "pure-color/convert/hsl2rgb";
+import { rgb2cmyk } from "pure-color/convert/rgb2cmyk";
 
 // define a new function composing the others
 function hsl2cmyk(hsl) {
@@ -106,9 +89,9 @@ Parse functions have signature `String -> [Number]`.
 A generic parsing function is available, which accepts `hsl`, `rgb`, and `hex` string formats. This always converts to `rgb` space for consistency - if you don't know what format the color is to begin with, you don't know what color space will be returned.
 
 ```js
-import parse from "pure-color/parse";
+import { parse } from "pure-color/parse/parse";
 
-// parse is a function itself which converts hsl/rgb/hex string to `[r, g, b, a]`
+// parse auto-detects format and converts hsl/rgb/hex string to `[r, g, b, a]`
 parse("rgb(0, 0, 0)");     // [0, 0, 0]
 parse("hsl(0, 0, 0)");     // [0, 0, 0]
 parse("#000000");           // [0, 0, 0]
@@ -121,11 +104,9 @@ parse("hsla(0, 0, 0, 1)"); // [0, 0, 0]
 Individual parsing functions are available if you know what format you will be parsing. Note that the `hsl` parse function returns an `hsl` array, whereas `rgb` and `hex` return an `rgb` array
 
 ```js
-import parse from "pure-color/parse";
-import parseHsl from "pure-color/parse/hsl";
+import { hsl } from "pure-color/parse/hsl";
 
-parseHsl("hsla(0, 0, 0, 1)"); // [0, 0, 0, 1]
-parse.hsl("hsla(0, 0, 0, 1)"); // [0, 0, 0, 1]
+hsl("hsla(0, 0, 0, 1)"); // [0, 0, 0, 1]
 ```
 
 ## Dependencies

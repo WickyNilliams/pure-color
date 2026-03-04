@@ -1,10 +1,10 @@
-import rgb2xyz from "./rgb2xyz.js";
+import { rgb2xyz } from "./rgb2xyz.js";
 
 /**
  * @param {number[]} rgb
  * @returns {number[]}
  */
-function rgb2lab(rgb) {
+export function rgb2lab(rgb) {
   var xyz = rgb2xyz(rgb),
         x = xyz[0],
         y = xyz[1],
@@ -26,4 +26,3 @@ function rgb2lab(rgb) {
   return [l, a, b];
 }
 
-export default rgb2lab;

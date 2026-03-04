@@ -2,7 +2,7 @@
  * @param {number[]} lab
  * @returns {number[]}
  */
-function lab2xyz(lab) {
+export function lab2xyz(lab) {
   var l = lab[0],
       a = lab[1],
       b = lab[2],
@@ -29,4 +29,3 @@ function lab2xyz(lab) {
   return [x, y, z];
 }
 
-export default lab2xyz;

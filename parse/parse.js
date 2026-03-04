@@ -1,7 +1,7 @@
-import hsl from "./hsl.js";
-import hex from "./hex.js";
-import rgb from "./rgb.js";
-import hsl2rgb from "../convert/hsl2rgb.js";
+import { hsl } from "./hsl.js";
+import { hex } from "./hex.js";
+import { rgb } from "./rgb.js";
+import { hsl2rgb } from "../convert/hsl2rgb.js";
 
 /**
  * @param {string} color
@@ -29,16 +29,10 @@ var space2parser = {
  * @param {string} color
  * @returns {number[] | undefined}
  */
-function parse(color) {
+export function parse(color) {
   for(var scheme in space2parser) {
     if(color.indexOf(scheme) === 0) {
       return space2parser[scheme](color);
     }
   }
 }
-
-parse.rgb = rgb;
-parse.hsl = hsl;
-parse.hex = hex;
-
-export default parse;

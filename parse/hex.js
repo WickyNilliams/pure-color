@@ -17,7 +17,7 @@ function expand(hex) {
  * @param {string} hex
  * @returns {number[]}
  */
-function hex(hex) {
+export function hex(hex) {
   // #RGB or #RGBA
   if(hex.length === 4 || hex.length === 5) {
     hex = expand(hex);
@@ -38,4 +38,3 @@ function hex(hex) {
   return rgb;
 }
 
-export default hex;

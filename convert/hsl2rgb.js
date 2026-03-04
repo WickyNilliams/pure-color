@@ -2,7 +2,7 @@
  * @param {number[]} hsl
  * @returns {number[]}
  */
-function hsl2rgb(hsl) {
+export function hsl2rgb(hsl) {
   var h = hsl[0] / 360,
       s = hsl[1] / 100,
       l = hsl[2] / 100,
@@ -40,4 +40,3 @@ function hsl2rgb(hsl) {
   return rgb;
 }
 
-export default hsl2rgb;

@@ -4,8 +4,7 @@
  * @param {number} max
  * @returns {number}
  */
-function clamp(val, min, max) {
+export function clamp(val, min, max) {
   return Math.min(Math.max(val, min), max);
 }
 
-export default clamp;

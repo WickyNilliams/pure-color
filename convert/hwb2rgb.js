@@ -3,7 +3,7 @@
  * @param {number[]} hwb
  * @returns {number[]}
  */
-function hwb2rgb(hwb) {
+export function hwb2rgb(hwb) {
   var h = hwb[0] / 360,
       wh = hwb[1] / 100,
       bl = hwb[2] / 100,
@@ -38,4 +38,3 @@ function hwb2rgb(hwb) {
   return [r * 255, g * 255, b * 255];
 }
 
-export default hwb2rgb;

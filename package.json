@@ -2,13 +2,6 @@
   "name": "pure-color",
   "description": "Pure functions for color conversion and parsing",
   "type": "module",
-  "main": "index.js",
-  "types": "types/index.d.ts",
-  "typesVersions": {
-    "*": {
-      "*": ["types/*"]
-    }
-  },
   "version": "1.3.0",
   "author": "Nick Williams",
   "repository": {

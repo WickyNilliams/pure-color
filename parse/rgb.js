@@ -1,5 +1,5 @@
-import extractComponents from "./extractComponents.js";
-import clamp from "../util/clamp.js";
+import { extractComponents } from "./extractComponents.js";
+import { clamp } from "../util/clamp.js";
 
 /**
  * @param {string} component
@@ -22,8 +22,7 @@ function parseRgbComponent(component, i) {
  * @param {string} color
  * @returns {number[]}
  */
-function rgb(color) {
+export function rgb(color) {
   return extractComponents(color).map(parseRgbComponent);
 }
 
-export default rgb;

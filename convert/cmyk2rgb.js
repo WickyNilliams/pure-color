@@ -2,7 +2,7 @@
  * @param {number[]} cmyk
  * @returns {number[]}
  */
-function cmyk2rgb(cmyk) {
+export function cmyk2rgb(cmyk) {
   var c = cmyk[0] / 100,
       m = cmyk[1] / 100,
       y = cmyk[2] / 100,
@@ -15,4 +15,3 @@ function cmyk2rgb(cmyk) {
   return [r * 255, g * 255, b * 255];
 }
 
-export default cmyk2rgb;

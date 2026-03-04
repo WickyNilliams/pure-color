@@ -2,7 +2,7 @@
  * @param {number[]} rgb
  * @returns {number[]}
  */
-function rgb2hsv(rgb) {
+export function rgb2hsv(rgb) {
   var r = rgb[0],
       g = rgb[1],
       b = rgb[2],
@@ -35,4 +35,3 @@ function rgb2hsv(rgb) {
   return [h, s, v];
 }
 
-export default rgb2hsv;

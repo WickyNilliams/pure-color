@@ -1,5 +1,5 @@
-import extractComponents from "./extractComponents.js";
-import clamp from "../util/clamp.js";
+import { extractComponents } from "./extractComponents.js";
+import { clamp } from "../util/clamp.js";
 
 /**
  * @param {string} component
@@ -26,8 +26,7 @@ function parseHslComponent(component, i) {
  * @param {string} color
  * @returns {number[]}
  */
-function hsl(color) {
+export function hsl(color) {
   return extractComponents(color).map(parseHslComponent);
 }
 
-export default hsl;

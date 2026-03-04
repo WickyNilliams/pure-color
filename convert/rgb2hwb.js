@@ -1,10 +1,10 @@
-import rgb2hsl from "./rgb2hsl.js";
+import { rgb2hsl } from "./rgb2hsl.js";
 
 /**
  * @param {number[]} rgb
  * @returns {number[]}
  */
-function rgb2hwb(rgb) {
+export function rgb2hwb(rgb) {
   var r = rgb[0],
       g = rgb[1],
       b = rgb[2],
@@ -15,4 +15,3 @@ function rgb2hwb(rgb) {
   return [h, w * 100, b * 100];
 }
 
-export default rgb2hwb;

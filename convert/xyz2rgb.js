@@ -2,7 +2,7 @@
  * @param {number[]} xyz
  * @returns {number[]}
  */
-function xyz2rgb(xyz) {
+export function xyz2rgb(xyz) {
   var x = xyz[0] / 100,
       y = xyz[1] / 100,
       z = xyz[2] / 100,
@@ -29,4 +29,3 @@ function xyz2rgb(xyz) {
   return [r * 255, g * 255, b * 255];
 }
 
-export default xyz2rgb;

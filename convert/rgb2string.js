@@ -2,7 +2,7 @@
  * @param {number[]} rgb
  * @returns {string}
  */
-function rgb2string(rgb) {
+export function rgb2string(rgb) {
   var scheme = "rgb";
 
   if(rgb.length === 4) {
@@ -16,4 +16,3 @@ function rgb2string(rgb) {
   return scheme + "(" + rgb.join(",") + ")";
 }
 
-export default rgb2string;
