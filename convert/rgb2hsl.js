@@ -1,3 +1,7 @@
+/**
+ * @param {number[]} rgb
+ * @returns {number[]}
+ */
 function rgb2hsl(rgb) {
   var r = rgb[0]/255,
       g = rgb[1]/255,

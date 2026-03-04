@@ -1,3 +1,7 @@
+/**
+ * @param {string} hex
+ * @returns {string}
+ */
 function expand(hex) {
   var result = "#";
 
@@ -9,6 +13,10 @@ function expand(hex) {
   return result;
 }
 
+/**
+ * @param {string} hex
+ * @returns {number[]}
+ */
 function hex(hex) {
   // #RGB or #RGBA
   if(hex.length === 4 || hex.length === 5) {

@@ -1,10 +1,14 @@
 // http://dev.w3.org/csswg/css-color/#hwb-to-rgb
+/**
+ * @param {number[]} hwb
+ * @returns {number[]}
+ */
 function hwb2rgb(hwb) {
   var h = hwb[0] / 360,
       wh = hwb[1] / 100,
       bl = hwb[2] / 100,
       ratio = wh + bl,
-      i, v, f, n;
+      i, v, f, n, r, g, b;
 
   // wh + bl cant be > 1
   if (ratio > 1) {

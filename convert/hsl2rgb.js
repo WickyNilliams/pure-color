@@ -1,3 +1,7 @@
+/**
+ * @param {number[]} hsl
+ * @returns {number[]}
+ */
 function hsl2rgb(hsl) {
   var h = hsl[0] / 360,
       s = hsl[1] / 100,

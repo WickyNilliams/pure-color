@@ -1,3 +1,7 @@
+/**
+ * @param {number[]} rgb
+ * @returns {string}
+ */
 function rgb2string(rgb) {
   var scheme = "rgb";
 

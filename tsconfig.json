@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationDir": "types",
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node"
+  },
+  "include": [
+    "index.js",
+    "convert/**/*.js",
+    "parse/**/*.js",
+    "util/**/*.js"
+  ],
+  "exclude": [
+    "test/**"
+  ]
+}
