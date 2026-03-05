@@ -1,10 +1,11 @@
-var rgb2xyz = require("./rgb2xyz");
+import { rgb2xyz } from "./rgb2xyz.js";
+
 
 /**
  * @param {number[]} rgb
- * @returns {number[]}
+ * @returns {[number, number, number]}
  */
-function rgb2lab(rgb) {
+export function rgb2lab(rgb) {
   var xyz = rgb2xyz(rgb),
         x = xyz[0],
         y = xyz[1],
@@ -25,5 +26,3 @@ function rgb2lab(rgb) {
 
   return [l, a, b];
 }
-
-module.exports = rgb2lab;

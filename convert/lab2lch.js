@@ -1,8 +1,8 @@
 /**
  * @param {number[]} lab
- * @returns {number[]}
+ * @returns {[number, number, number]}
  */
-function lab2lch(lab) {
+export function lab2lch(lab) {
   var l = lab[0],
       a = lab[1],
       b = lab[2],
@@ -16,5 +16,3 @@ function lab2lch(lab) {
   c = Math.sqrt(a * a + b * b);
   return [l, c, h];
 }
-
-module.exports = lab2lch;

@@ -1,5 +1,4 @@
-var clamp = require("../util/clamp");
-
+import { clamp } from "../util/clamp.js";
 /**
  * @param {number} c
  * @returns {string}
@@ -15,10 +14,8 @@ function componentToHex(c) {
  * @param {number[]} rgb
  * @returns {string}
  */
-function rgb2hex(rgb) {
+export function rgb2hex(rgb) {
   var alpha = rgb.length === 4 ? componentToHex(rgb[3] * 255) : "";
 
   return "#" + componentToHex(rgb[0]) + componentToHex(rgb[1]) + componentToHex(rgb[2]) + alpha;
 }
-
-module.exports = rgb2hex;

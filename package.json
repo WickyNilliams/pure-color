@@ -1,7 +1,7 @@
 {
   "name": "pure-color",
   "description": "Pure functions for color conversion and parsing",
-  "main": "index.js",
+  "type": "module",
   "types": "types/index.d.ts",
   "typesVersions": {
     "*": {

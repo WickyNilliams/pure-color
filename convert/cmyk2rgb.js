@@ -1,8 +1,8 @@
 /**
  * @param {number[]} cmyk
- * @returns {number[]}
+ * @returns {[number, number, number]}
  */
-function cmyk2rgb(cmyk) {
+export function cmyk2rgb(cmyk) {
   var c = cmyk[0] / 100,
       m = cmyk[1] / 100,
       y = cmyk[2] / 100,
@@ -14,5 +14,3 @@ function cmyk2rgb(cmyk) {
   b = 1 - Math.min(1, y * (1 - k) + k);
   return [r * 255, g * 255, b * 255];
 }
-
-module.exports = cmyk2rgb;

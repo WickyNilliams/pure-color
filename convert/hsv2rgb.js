@@ -1,8 +1,8 @@
 /**
  * @param {number[]} hsv
- * @returns {number[]}
+ * @returns {[number, number, number]}
  */
-function hsv2rgb(hsv) {
+export function hsv2rgb(hsv) {
   var h = hsv[0] / 60,
       s = hsv[1] / 100,
       v = hsv[2] / 100,
@@ -29,5 +29,3 @@ function hsv2rgb(hsv) {
       return [v, p, q];
   }
 }
-
-module.exports = hsv2rgb;

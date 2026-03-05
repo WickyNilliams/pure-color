@@ -1,12 +1,16 @@
-var { describe, it } = require("node:test");
-var assert = require("node:assert");
-var fixtures = require("./fixtures/parse");
+import { describe, it } from "node:test";
+import assert from "node:assert";
+import fixtures from "./fixtures/parse.json" with { type: "json" };
+import { rgb } from "../parse/rgb.js";
+import { hex } from "../parse/hex.js";
+import { hsl } from "../parse/hsl.js";
+import { parse } from "../parse/parse.js";
 
 var parsers = {
-  rgb   : require("../parse/rgb"),
-  hex   : require("../parse/hex"),
-  hsl   : require("../parse/hsl"),
-  parse : require("../parse")
+  rgb,
+  hex,
+  hsl,
+  parse
 };
 
 for (var space in parsers) {

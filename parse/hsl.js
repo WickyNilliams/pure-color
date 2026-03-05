@@ -1,5 +1,6 @@
-var extractComponents = require("./extractComponents");
-var clamp = require("../util/clamp");
+import { extractComponents } from "./extractComponents.js";
+import { clamp } from "../util/clamp.js";
+
 
 /**
  * @param {string} component
@@ -24,10 +25,8 @@ function parseHslComponent(component, i) {
 
 /**
  * @param {string} color
- * @returns {number[]}
+ * @returns {[number, number, number, number?]}
  */
-function hsl(color) {
-  return extractComponents(color).map(parseHslComponent);
+export function hsl(color) {
+  return /** @type {[number, number, number, number?]} */ (extractComponents(color).map(parseHslComponent));
 }
-
-module.exports = hsl;

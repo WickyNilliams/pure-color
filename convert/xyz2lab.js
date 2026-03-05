@@ -1,8 +1,8 @@
 /**
  * @param {number[]} xyz
- * @returns {number[]}
+ * @returns {[number, number, number]}
  */
-function xyz2lab(xyz) {
+export function xyz2lab(xyz) {
   var x = xyz[0],
       y = xyz[1],
       z = xyz[2],
@@ -22,5 +22,3 @@ function xyz2lab(xyz) {
 
   return [l, a, b];
 }
-
-module.exports = xyz2lab;

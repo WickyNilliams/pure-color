@@ -15,9 +15,9 @@ function expand(hex) {
 
 /**
  * @param {string} hex
- * @returns {number[]}
+ * @returns {[number, number, number, number?]}
  */
-function hex(hex) {
+export function hex(hex) {
   // #RGB or #RGBA
   if(hex.length === 4 || hex.length === 5) {
     hex = expand(hex);
@@ -35,7 +35,5 @@ function hex(hex) {
     rgb.push(alpha);
   }
 
-  return rgb;
+  return /** @type {[number, number, number, number?]} */ (rgb);
 }
-
-module.exports = hex;

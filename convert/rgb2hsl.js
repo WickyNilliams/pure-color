@@ -1,8 +1,8 @@
 /**
  * @param {number[]} rgb
- * @returns {number[]}
+ * @returns {[number, number, number]}
  */
-function rgb2hsl(rgb) {
+export function rgb2hsl(rgb) {
   var r = rgb[0]/255,
       g = rgb[1]/255,
       b = rgb[2]/255,
@@ -36,5 +36,3 @@ function rgb2hsl(rgb) {
 
   return [h, s * 100, l * 100];
 }
-
-module.exports = rgb2hsl;

@@ -2,7 +2,7 @@
  * @param {number[]} hsl
  * @returns {string}
  */
-function hsl2string(hsl) {
+export function hsl2string(hsl) {
   var scheme = "hsl";
 
   if(hsl.length === 4) {
@@ -17,5 +17,3 @@ function hsl2string(hsl) {
 
   return `${scheme}(${parts.join(",")})`;
 }
-
-module.exports = hsl2string;

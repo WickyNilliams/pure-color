@@ -1,8 +1,8 @@
 /**
  * @param {number[]} hsl
- * @returns {number[]}
+ * @returns {[number, number, number]}
  */
-function hsl2hsv(hsl) {
+export function hsl2hsv(hsl) {
   var h = hsl[0],
       s = hsl[1] / 100,
       l = hsl[2] / 100,
@@ -20,5 +20,3 @@ function hsl2hsv(hsl) {
   sv = (2 * s) / (l + s);
   return [h, sv * 100, v * 100];
 }
-
-module.exports = hsl2hsv;

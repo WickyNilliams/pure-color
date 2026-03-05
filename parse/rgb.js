@@ -1,5 +1,6 @@
-var extractComponents = require("./extractComponents");
-var clamp = require("../util/clamp");
+import { extractComponents } from "./extractComponents.js";
+import { clamp } from "../util/clamp.js";
+
 
 /**
  * @param {string} component
@@ -20,10 +21,8 @@ function parseRgbComponent(component, i) {
 
 /**
  * @param {string} color
- * @returns {number[]}
+ * @returns {[number, number, number, number?]}
  */
-function rgb(color) {
-  return extractComponents(color).map(parseRgbComponent);
+export function rgb(color) {
+  return /** @type {[number, number, number, number?]} */ (extractComponents(color).map(parseRgbComponent));
 }
-
-module.exports = rgb;

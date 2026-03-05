@@ -1,8 +1,8 @@
 /**
  * @param {number[]} lch
- * @returns {number[]}
+ * @returns {[number, number, number]}
  */
-function lch2lab(lch) {
+export function lch2lab(lch) {
   var l = lch[0],
       c = lch[1],
       h = lch[2],
@@ -13,5 +13,3 @@ function lch2lab(lch) {
   b = c * Math.sin(hr);
   return [l, a, b];
 }
-
-module.exports = lch2lab;
