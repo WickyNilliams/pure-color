@@ -1,5 +1,5 @@
 /**
- * @param {[number, number, number]} lch
+ * @param {number[]} lch
  * @returns {[number, number, number]}
  */
 export function lch2lab(lch) {

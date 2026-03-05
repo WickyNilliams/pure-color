@@ -2,7 +2,7 @@ import { rgb2hsl } from "./rgb2hsl.js";
 
 
 /**
- * @param {[number, number, number, number?]} rgb
+ * @param {number[]} rgb
  * @returns {[number, number, number]}
  */
 export function rgb2hwb(rgb) {

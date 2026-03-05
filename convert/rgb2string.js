@@ -1,5 +1,5 @@
 /**
- * @param {[number, number, number, number?]} rgb
+ * @param {number[]} rgb
  * @returns {string}
  */
 export function rgb2string(rgb) {

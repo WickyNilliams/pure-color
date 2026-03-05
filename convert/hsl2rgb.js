@@ -1,5 +1,5 @@
 /**
- * @param {[number, number, number, number?]} hsl
+ * @param {number[]} hsl
  * @returns {[number, number, number]}
  */
 export function hsl2rgb(hsl) {

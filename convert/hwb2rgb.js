@@ -1,7 +1,7 @@
 // http://dev.w3.org/csswg/css-color/#hwb-to-rgb
 
 /**
- * @param {[number, number, number]} hwb
+ * @param {number[]} hwb
  * @returns {[number, number, number]}
  */
 export function hwb2rgb(hwb) {

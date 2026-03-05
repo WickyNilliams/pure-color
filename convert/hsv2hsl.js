@@ -1,5 +1,5 @@
 /**
- * @param {[number, number, number]} hsv
+ * @param {number[]} hsv
  * @returns {[number, number, number]}
  */
 export function hsv2hsl(hsv) {

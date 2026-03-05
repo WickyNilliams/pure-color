@@ -1,5 +1,5 @@
 /**
- * @param {[number, number, number, number]} cmyk
+ * @param {number[]} cmyk
  * @returns {[number, number, number]}
  */
 export function cmyk2rgb(cmyk) {

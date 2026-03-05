@@ -1,5 +1,5 @@
 /**
- * @param {[number, number, number]} xyz
+ * @param {number[]} xyz
  * @returns {[number, number, number]}
  */
 export function xyz2lab(xyz) {

@@ -1,5 +1,5 @@
 /**
- * @param {[number, number, number, number?]} rgb
+ * @param {number[]} rgb
  * @returns {number}
  */
 export function rgb2grayscale (rgb) {

@@ -1,5 +1,5 @@
 /**
- * @param {[number, number, number, number?]} hsl
+ * @param {number[]} hsl
  * @returns {string}
  */
 export function hsl2string(hsl) {

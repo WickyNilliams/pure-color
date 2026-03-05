@@ -11,7 +11,7 @@ function componentToHex(c) {
 }
 
 /**
- * @param {[number, number, number, number?]} rgb
+ * @param {number[]} rgb
  * @returns {string}
  */
 export function rgb2hex(rgb) {
