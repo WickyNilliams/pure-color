@@ -1,6 +1,9 @@
+/** @typedef {import("../types.js").HSV} HSV */
+/** @typedef {import("../types.js").HSL} HSL */
+
 /**
- * @param {number[]} hsv
- * @returns {number[]}
+ * @param {HSV} hsv
+ * @returns {HSL}
  */
 export function hsv2hsl(hsv) {
   var h = hsv[0],
@@ -15,4 +18,3 @@ export function hsv2hsl(hsv) {
   l /= 2;
   return [h, sl * 100, l * 100];
 }
-

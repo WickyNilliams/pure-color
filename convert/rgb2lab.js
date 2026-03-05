@@ -1,8 +1,11 @@
 import { rgb2xyz } from "./rgb2xyz.js";
 
+/** @typedef {import("../types.js").RGB} RGB */
+/** @typedef {import("../types.js").Lab} Lab */
+
 /**
- * @param {number[]} rgb
- * @returns {number[]}
+ * @param {RGB} rgb
+ * @returns {Lab}
  */
 export function rgb2lab(rgb) {
   var xyz = rgb2xyz(rgb),
@@ -25,4 +28,3 @@ export function rgb2lab(rgb) {
 
   return [l, a, b];
 }
-

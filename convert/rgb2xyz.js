@@ -1,6 +1,9 @@
+/** @typedef {import("../types.js").RGB} RGB */
+/** @typedef {import("../types.js").XYZ} XYZ */
+
 /**
- * @param {number[]} rgb
- * @returns {number[]}
+ * @param {RGB} rgb
+ * @returns {XYZ}
  */
 export function rgb2xyz(rgb) {
   var r = rgb[0] / 255,
@@ -18,4 +21,3 @@ export function rgb2xyz(rgb) {
 
   return [x * 100, y *100, z * 100];
 }
-

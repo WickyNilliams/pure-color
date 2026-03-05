@@ -1,5 +1,7 @@
 import { clamp } from "../util/clamp.js";
 
+/** @typedef {import("../types.js").RGB} RGB */
+
 /**
  * @param {number} c
  * @returns {string}
@@ -12,12 +14,11 @@ function componentToHex(c) {
 }
 
 /**
- * @param {number[]} rgb
+ * @param {RGB} rgb
  * @returns {string}
  */
 export function rgb2hex(rgb) {
-  var alpha = rgb.length === 4 ? componentToHex(rgb[3] * 255) : "";
+  var alpha = rgb.length === 4 ? componentToHex(/** @type {number} */ (rgb[3]) * 255) : "";
 
   return "#" + componentToHex(rgb[0]) + componentToHex(rgb[1]) + componentToHex(rgb[2]) + alpha;
 }
-

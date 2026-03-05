@@ -1,5 +1,7 @@
+/** @typedef {import("../types.js").RGB} RGB */
+
 /**
- * @param {number[]} rgb
+ * @param {RGB} rgb
  * @returns {string}
  */
 export function rgb2string(rgb) {
@@ -15,4 +17,3 @@ export function rgb2string(rgb) {
 
   return scheme + "(" + rgb.join(",") + ")";
 }
-

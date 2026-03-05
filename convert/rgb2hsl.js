@@ -1,6 +1,9 @@
+/** @typedef {import("../types.js").RGB} RGB */
+/** @typedef {import("../types.js").HSL} HSL */
+
 /**
- * @param {number[]} rgb
- * @returns {number[]}
+ * @param {RGB} rgb
+ * @returns {HSL}
  */
 export function rgb2hsl(rgb) {
   var r = rgb[0]/255,
@@ -36,4 +39,3 @@ export function rgb2hsl(rgb) {
 
   return [h, s * 100, l * 100];
 }
-

@@ -1,5 +1,7 @@
+/** @typedef {import("../types.js").HSL} HSL */
+
 /**
- * @param {number[]} hsl
+ * @param {HSL} hsl
  * @returns {string}
  */
 export function hsl2string(hsl) {
@@ -17,4 +19,3 @@ export function hsl2string(hsl) {
 
   return `${scheme}(${parts.join(",")})`;
 }
-

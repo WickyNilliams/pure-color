@@ -1,8 +1,11 @@
 import { rgb2hsl } from "./rgb2hsl.js";
 
+/** @typedef {import("../types.js").RGB} RGB */
+/** @typedef {import("../types.js").HWB} HWB */
+
 /**
- * @param {number[]} rgb
- * @returns {number[]}
+ * @param {RGB} rgb
+ * @returns {HWB}
  */
 export function rgb2hwb(rgb) {
   var r = rgb[0],
@@ -14,4 +17,3 @@ export function rgb2hwb(rgb) {
 
   return [h, w * 100, b * 100];
 }
-

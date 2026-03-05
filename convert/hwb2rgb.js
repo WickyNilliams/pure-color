@@ -1,7 +1,10 @@
 // http://dev.w3.org/csswg/css-color/#hwb-to-rgb
+/** @typedef {import("../types.js").HWB} HWB */
+/** @typedef {import("../types.js").RGB} RGB */
+
 /**
- * @param {number[]} hwb
- * @returns {number[]}
+ * @param {HWB} hwb
+ * @returns {RGB}
  */
 export function hwb2rgb(hwb) {
   var h = hwb[0] / 360,
@@ -37,4 +40,3 @@ export function hwb2rgb(hwb) {
 
   return [r * 255, g * 255, b * 255];
 }
-

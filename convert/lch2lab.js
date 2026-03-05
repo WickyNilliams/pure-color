@@ -1,6 +1,9 @@
+/** @typedef {import("../types.js").LCh} LCh */
+/** @typedef {import("../types.js").Lab} Lab */
+
 /**
- * @param {number[]} lch
- * @returns {number[]}
+ * @param {LCh} lch
+ * @returns {Lab}
  */
 export function lch2lab(lch) {
   var l = lch[0],
@@ -13,4 +16,3 @@ export function lch2lab(lch) {
   b = c * Math.sin(hr);
   return [l, a, b];
 }
-

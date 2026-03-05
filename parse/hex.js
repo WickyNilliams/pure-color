@@ -1,3 +1,5 @@
+/** @typedef {import("../types.js").RGB} RGB */
+
 /**
  * @param {string} hex
  * @returns {string}
@@ -15,7 +17,7 @@ function expand(hex) {
 
 /**
  * @param {string} hex
- * @returns {number[]}
+ * @returns {RGB}
  */
 export function hex(hex) {
   // #RGB or #RGBA
@@ -35,6 +37,5 @@ export function hex(hex) {
     rgb.push(alpha);
   }
 
-  return rgb;
+  return /** @type {RGB} */ (rgb);
 }
-

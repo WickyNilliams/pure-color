@@ -1,6 +1,9 @@
+/** @typedef {import("../types.js").HSV} HSV */
+/** @typedef {import("../types.js").RGB} RGB */
+
 /**
- * @param {number[]} hsv
- * @returns {number[]}
+ * @param {HSV} hsv
+ * @returns {RGB}
  */
 export function hsv2rgb(hsv) {
   var h = hsv[0] / 60,
@@ -29,4 +32,3 @@ export function hsv2rgb(hsv) {
       return [v, p, q];
   }
 }
-
