@@ -1,9 +1,6 @@
-/** @typedef {import("../types.js").RGB} RGB */
-/** @typedef {import("../types.js").CMYK} CMYK */
-
 /**
- * @param {RGB} rgb
- * @returns {CMYK}
+ * @param {[number, number, number, number?]} rgb
+ * @returns {[number, number, number, number]}
  */
 export function rgb2cmyk(rgb) {
   var r = rgb[0] / 255,

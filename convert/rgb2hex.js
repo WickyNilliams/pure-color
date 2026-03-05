@@ -1,7 +1,4 @@
 import { clamp } from "../util/clamp.js";
-
-/** @typedef {import("../types.js").RGB} RGB */
-
 /**
  * @param {number} c
  * @returns {string}
@@ -14,7 +11,7 @@ function componentToHex(c) {
 }
 
 /**
- * @param {RGB} rgb
+ * @param {[number, number, number, number?]} rgb
  * @returns {string}
  */
 export function rgb2hex(rgb) {

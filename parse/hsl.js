@@ -1,7 +1,6 @@
 import { extractComponents } from "./extractComponents.js";
 import { clamp } from "../util/clamp.js";
 
-/** @typedef {import("../types.js").HSL} HSL */
 
 /**
  * @param {string} component
@@ -26,8 +25,8 @@ function parseHslComponent(component, i) {
 
 /**
  * @param {string} color
- * @returns {HSL}
+ * @returns {[number, number, number, number?]}
  */
 export function hsl(color) {
-  return /** @type {HSL} */ (extractComponents(color).map(parseHslComponent));
+  return /** @type {[number, number, number, number?]} */ (extractComponents(color).map(parseHslComponent));
 }

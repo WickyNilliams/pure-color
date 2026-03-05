@@ -3,11 +3,10 @@ import { hex } from "./hex.js";
 import { rgb } from "./rgb.js";
 import { hsl2rgb } from "../convert/hsl2rgb.js";
 
-/** @typedef {import("../types.js").RGB} RGB */
 
 /**
  * @param {string} color
- * @returns {RGB}
+ * @returns {[number, number, number, number?]}
  */
 function hsl2rgbParse(color) {
   var h = hsl(color);
@@ -29,7 +28,7 @@ var space2parser = {
 
 /**
  * @param {string} color
- * @returns {RGB | undefined}
+ * @returns {[number, number, number, number?] | undefined}
  */
 export function parse(color) {
   for(var scheme in space2parser) {

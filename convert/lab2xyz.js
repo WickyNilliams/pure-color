@@ -1,9 +1,6 @@
-/** @typedef {import("../types.js").Lab} Lab */
-/** @typedef {import("../types.js").XYZ} XYZ */
-
 /**
- * @param {Lab} lab
- * @returns {XYZ}
+ * @param {[number, number, number]} lab
+ * @returns {[number, number, number]}
  */
 export function lab2xyz(lab) {
   var l = lab[0],

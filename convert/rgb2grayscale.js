@@ -1,7 +1,5 @@
-/** @typedef {import("../types.js").RGB} RGB */
-
 /**
- * @param {RGB} rgb
+ * @param {[number, number, number, number?]} rgb
  * @returns {number}
  */
 export function rgb2grayscale (rgb) {

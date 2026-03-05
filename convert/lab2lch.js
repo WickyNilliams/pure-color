@@ -1,9 +1,6 @@
-/** @typedef {import("../types.js").Lab} Lab */
-/** @typedef {import("../types.js").LCh} LCh */
-
 /**
- * @param {Lab} lab
- * @returns {LCh}
+ * @param {[number, number, number]} lab
+ * @returns {[number, number, number]}
  */
 export function lab2lch(lab) {
   var l = lab[0],

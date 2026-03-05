@@ -1,7 +1,6 @@
 import { extractComponents } from "./extractComponents.js";
 import { clamp } from "../util/clamp.js";
 
-/** @typedef {import("../types.js").RGB} RGB */
 
 /**
  * @param {string} component
@@ -22,8 +21,8 @@ function parseRgbComponent(component, i) {
 
 /**
  * @param {string} color
- * @returns {RGB}
+ * @returns {[number, number, number, number?]}
  */
 export function rgb(color) {
-  return /** @type {RGB} */ (extractComponents(color).map(parseRgbComponent));
+  return /** @type {[number, number, number, number?]} */ (extractComponents(color).map(parseRgbComponent));
 }

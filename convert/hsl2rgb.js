@@ -1,9 +1,6 @@
-/** @typedef {import("../types.js").HSL} HSL */
-/** @typedef {import("../types.js").RGB} RGB */
-
 /**
- * @param {HSL} hsl
- * @returns {RGB}
+ * @param {[number, number, number, number?]} hsl
+ * @returns {[number, number, number]}
  */
 export function hsl2rgb(hsl) {
   var h = hsl[0] / 360,
@@ -40,5 +37,5 @@ export function hsl2rgb(hsl) {
     rgb[i] = val * 255;
   }
 
-  return /** @type {RGB} */ (rgb);
+  return /** @type {[number, number, number]} */ (rgb);
 }
