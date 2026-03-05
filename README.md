@@ -31,7 +31,7 @@ import { parse } from "pure-color/parse/parse";
 
 ### Conversion
 
-The majority of conversion functions have the signature `(color: number[]) => number[]`. The exceptions are `rgb2string` and `rgb2hex`, whose signature is `(rgb: number[]) => string`.
+The majority of conversion functions have the signature `number[] => number[]`. The exceptions are `rgb2string` and `rgb2hex`, whose signature is `number[] => string`.
 
 You can see all available conversions in the [`convert` directory](convert).
 
@@ -84,7 +84,7 @@ If there are missing conversions that cannot be achieved through composition, pl
 
 ### Parsing
 
-Parse functions have signature `(input: string) => number[]`.
+Parse functions have signature `string => number[]`.
 
 A generic parsing function is available, which accepts `hsl`, `rgb`, and `hex` string formats. This always converts to `rgb` space for consistency - if you don't know what format the color is to begin with, you don't know what color space will be returned.
 
