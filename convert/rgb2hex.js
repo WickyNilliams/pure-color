@@ -15,7 +15,7 @@ function componentToHex(c) {
  * @returns {string}
  */
 export function rgb2hex(rgb) {
-  var alpha = rgb.length === 4 ? componentToHex(/** @type {number} */ (rgb[3]) * 255) : "";
+  var alpha = rgb.length === 4 ? componentToHex(rgb[3] * 255) : "";
 
   return "#" + componentToHex(rgb[0]) + componentToHex(rgb[1]) + componentToHex(rgb[2]) + alpha;
 }
