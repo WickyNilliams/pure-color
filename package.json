@@ -15,6 +15,17 @@
     "url": "https://github.com/WickyNilliams/pure-color.git"
   },
   "license": "MIT",
+  "files": [
+    "convert",
+    "parse",
+    "util",
+    "types",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
   "devDependencies": {
     "typescript": "^5.9.3"
   },

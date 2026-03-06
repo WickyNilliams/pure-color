@@ -1,6 +1,6 @@
 # pure-color
 
-[![Build Status](https://travis-ci.org/WickyNilliams/pure-color.svg)](https://travis-ci.org/WickyNilliams/pure-color)
+[![CI](https://github.com/WickyNilliams/pure-color/actions/workflows/ci.yml/badge.svg)](https://github.com/WickyNilliams/pure-color/actions/workflows/ci.yml)
 
 `pure-color` is a color conversion and parsing library for the browser and node. It offers conversions between `rgb`, `hsl`, `hsv`, `hwb`, `cmyk`, `xyz`, `lab`, `lch`, `hex`. It offers parsing of `rgb(a)`, `hex` and `hsl(a)` strings.
 

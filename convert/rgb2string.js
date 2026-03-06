@@ -9,9 +9,10 @@ export function rgb2string(rgb) {
     scheme += "a";
   }
 
-  rgb[0] = Math.round(rgb[0]);
-  rgb[1] = Math.round(rgb[1]);
-  rgb[2] = Math.round(rgb[2]);
+  var parts = rgb.slice();
+  parts[0] = Math.round(rgb[0]);
+  parts[1] = Math.round(rgb[1]);
+  parts[2] = Math.round(rgb[2]);
 
-  return `${scheme}(${rgb.join(",")})`;
+  return `${scheme}(${parts.join(",")})`;
 }
