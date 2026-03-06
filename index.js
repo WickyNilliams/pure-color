@@ -21,6 +21,6 @@ export { xyz2lab } from "./convert/xyz2lab.js";
 export { xyz2rgb } from "./convert/xyz2rgb.js";
 
 export { parse } from "./parse/parse.js";
-export { hex } from "./parse/hex.js";
-export { hsl } from "./parse/hsl.js";
-export { rgb } from "./parse/rgb.js";
+export { hex as parseHex } from "./parse/hex.js";
+export { hsl as parseHsl } from "./parse/hsl.js";
+export { rgb as parseRgb } from "./parse/rgb.js";
