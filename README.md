@@ -12,9 +12,12 @@ npm install pure-color --save
 
 ## Structure
 
-The library is structured to allow importing of just the functions you need.
+The library is structured to allow importing of just the functions you need. You can also import everything if file size is not a concern (e.g. node environment).
 
 ```js
+// import everything
+import * as color from "pure-color";
+
 // import individual conversion function
 import { rgb2hsl } from "pure-color/convert/rgb2hsl";
 

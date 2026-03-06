@@ -16,6 +16,7 @@
   },
   "license": "MIT",
   "files": [
+    "index.js",
     "convert",
     "parse",
     "util",
