@@ -2,6 +2,12 @@
   "name": "pure-color",
   "description": "Pure functions for color conversion and parsing",
   "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./convert/*": "./convert/*",
+    "./parse/*": "./parse/*"
+  },
   "types": "types/index.d.ts",
   "typesVersions": {
     "*": {
@@ -33,7 +39,8 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "build:types": "tsc",
-    "test": "node --test test/convert.js test/parse.js"
+    "test": "node --test test/convert.js test/parse.js",
+    "prepublishOnly": "npm run build:types"
   },
   "keywords": [
     "color",
