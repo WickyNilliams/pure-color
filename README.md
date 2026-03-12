@@ -1,7 +1,5 @@
 # pure-color
 
-[![Build Status](https://travis-ci.org/WickyNilliams/pure-color.svg)](https://travis-ci.org/WickyNilliams/pure-color)
-
 `pure-color` is a color conversion and parsing library for the browser and node. It offers conversions between `rgb`, `hsl`, `hsv`, `hwb`, `cmyk`, `xyz`, `lab`, `lch`, `hex`. It offers parsing of `rgb(a)`, `hex` and `hsl(a)` strings.
 
 ## Installation
@@ -14,9 +12,12 @@ npm install pure-color --save
 
 ## Structure
 
-The library is structured to allow importing of just the functions you need.
+The library is structured to allow importing of just the functions you need. You can also import everything if file size is not a concern (e.g. node environment).
 
 ```js
+// import everything
+import * as color from "pure-color";
+
 // import individual conversion function
 import { rgb2hsl } from "pure-color/convert/rgb2hsl";
 

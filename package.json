@@ -2,6 +2,12 @@
   "name": "pure-color",
   "description": "Pure functions for color conversion and parsing",
   "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./convert/*": "./convert/*",
+    "./parse/*": "./parse/*"
+  },
   "types": "types/index.d.ts",
   "typesVersions": {
     "*": {
@@ -15,13 +21,26 @@
     "url": "https://github.com/WickyNilliams/pure-color.git"
   },
   "license": "MIT",
+  "files": [
+    "index.js",
+    "convert",
+    "parse",
+    "util",
+    "types",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
   "devDependencies": {
     "typescript": "^5.9.3"
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
     "build:types": "tsc",
-    "test": "node --test test/convert.js test/parse.js"
+    "test": "node --test test/convert.js test/parse.js",
+    "prepublishOnly": "npm run build:types"
   },
   "keywords": [
     "color",

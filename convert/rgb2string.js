@@ -3,15 +3,9 @@
  * @returns {string}
  */
 export function rgb2string(rgb) {
-  var scheme = "rgb";
-
-  if(rgb.length === 4) {
-    scheme += "a";
+  const [r, g, b, a] = rgb;
+  if (a !== undefined) {
+    return `rgba(${Math.round(r)},${Math.round(g)},${Math.round(b)},${a})`;
   }
-
-  rgb[0] = Math.round(rgb[0]);
-  rgb[1] = Math.round(rgb[1]);
-  rgb[2] = Math.round(rgb[2]);
-
-  return `${scheme}(${rgb.join(",")})`;
+  return `rgb(${Math.round(r)},${Math.round(g)},${Math.round(b)})`;
 }
